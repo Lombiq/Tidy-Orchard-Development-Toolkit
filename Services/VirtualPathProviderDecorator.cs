@@ -117,14 +117,16 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
 
         public IEnumerable<string> ListFiles(string virtualPath)
         {
+            var files = _virtualPathProvider.ListFiles(virtualPath);
             _virtualPathDispatcher.AlterPathIfOrchard(ref virtualPath);
-            return _virtualPathProvider.ListFiles(virtualPath).Select(_virtualPathDispatcher.ConvertBackIfOrchard);
+            return _virtualPathProvider.ListFiles(virtualPath).Select(_virtualPathDispatcher.ConvertBackIfOrchard).Union(files);
         }
 
         public IEnumerable<string> ListDirectories(string virtualPath)
         {
+            var directories = _virtualPathProvider.ListDirectories(virtualPath);
             _virtualPathDispatcher.AlterPathIfOrchard(ref virtualPath);
-            return _virtualPathProvider.ListDirectories(virtualPath).Select(_virtualPathDispatcher.ConvertBackIfOrchard);
+            return _virtualPathProvider.ListDirectories(virtualPath).Select(_virtualPathDispatcher.ConvertBackIfOrchard).Union(directories);
         }
     }
 }

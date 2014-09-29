@@ -80,6 +80,11 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
 
         private static string ToAppRelativeIfNecessary(string virtualPath)
         {
+            // Otherwise exceptions like "Failed to map the path 
+            // '/HostingSuite/Orchard/src/Orchard.Web/Modules/Lombiq.Hosting.Azure.Indexing/$(ModulesRoot)../Lucene/Lucene.csproj'.
+            // would be thrown.
+            virtualPath = virtualPath.Replace("$(ModulesRoot)", string.Empty);
+
             if (!virtualPath.StartsWith("~"))
             {
                 return VirtualPathUtility.ToAppRelative(virtualPath);
