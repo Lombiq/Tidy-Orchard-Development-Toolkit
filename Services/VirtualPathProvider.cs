@@ -25,7 +25,7 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
             var alteredDependencies = new List<string>();
             foreach (string dependency in virtualPathDependencies)
             {
-                alteredDependencies.Add(AlterPathIfOrchard(dependency));
+                alteredDependencies.Add(ReMapPathIfOrchard(dependency));
             }
 
             return base.GetCacheDependency(virtualPath, alteredDependencies, utcStart);
@@ -39,7 +39,7 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
 
         public override System.Web.Hosting.VirtualFile GetFile(string virtualPath)
         {
-            var newPath = AlterPathIfOrchard(virtualPath);
+            var newPath = ReMapPathIfOrchard(virtualPath);
 
             if (newPath != virtualPath)
             {
@@ -52,14 +52,9 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
             return base.GetFile(virtualPath);
         }
 
-        public string AlterPathIfOrchard(string virtualPath)
+        public string ReMapPathIfOrchard(string virtualPath)
         {
-            var orchardPath = virtualPath;
-
-            if (!orchardPath.StartsWith("~"))
-            {
-                orchardPath = VirtualPathUtility.ToAppRelative(orchardPath);
-            }
+            var orchardPath = ToAppRelativeIfNecessary(virtualPath);
 
             if (orchardPath.StartsWith("~/Orchard/src/Orchard.Web/")) return virtualPath;
 
@@ -68,6 +63,26 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
             if (base.FileExists(orchardPath) || base.DirectoryExists(orchardPath))
             {
                 return orchardPath;
+            }
+
+            return virtualPath;
+        }
+
+        public string ConvertBackIfOrchard(string virtualPath)
+        {
+            var orchardPath = ToAppRelativeIfNecessary(virtualPath);
+
+            if (!orchardPath.StartsWith("~/Orchard/src/Orchard.Web/")) return virtualPath;
+
+            return orchardPath.Replace("~/Orchard/src/Orchard.Web/", "~/");
+        }
+
+
+        private static string ToAppRelativeIfNecessary(string virtualPath)
+        {
+            if (!virtualPath.StartsWith("~"))
+            {
+                return VirtualPathUtility.ToAppRelative(virtualPath);
             }
 
             return virtualPath;

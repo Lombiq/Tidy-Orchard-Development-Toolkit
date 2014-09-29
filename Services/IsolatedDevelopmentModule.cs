@@ -45,7 +45,7 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
                     // won't handle extension-less files but this should be extremely reare.
                     if (!string.IsNullOrEmpty(request.CurrentExecutionFilePathExtension))
                     {
-                        var rewrittenPath = HostContainer.Resolve<IVirtualPathDispatcher>().AlterPathIfOrchard(request.AppRelativeCurrentExecutionFilePath);
+                        var rewrittenPath = HostContainer.Resolve<IVirtualPathDispatcher>().ReMapPathIfOrchard(request.AppRelativeCurrentExecutionFilePath);
                         if (rewrittenPath != request.AppRelativeCurrentExecutionFilePath)
                         {
                             httpContext.RewritePath(rewrittenPath);
