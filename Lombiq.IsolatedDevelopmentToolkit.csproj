@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IsolatedDevelopmentModule.cs" />
+    <Compile Include="AutofacModules\DecoratorsModule.cs" />
+    <Compile Include="AutofacModules\IsolatedDevelopmentModule.cs" />
+    <Compile Include="AutofacModules\VirtualPathProviderModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IsolatedDevelopmentHttpModule.cs" />
     <Compile Include="Services\IVirtualPathDispatcher.cs" />

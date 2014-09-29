@@ -8,16 +8,13 @@ using Autofac.Core;
 using Lombiq.IsolatedDevelopmentToolkit.Services;
 using Orchard.Environment;
 using Orchard.FileSystems.VirtualPath;
-using Orchard.Localization;
 
-namespace Lombiq.IsolatedDevelopmentToolkit
+namespace Lombiq.IsolatedDevelopmentToolkit.AutofacModules
 {
-    public class IsolatedDevelopmentModule : Module
+    public class DecoratorsModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<VirtualPathProvider>().As<ICustomVirtualPathProvider>().As<IVirtualPathDispatcher>().SingleInstance();
-
             // Without shell registrations everything hooked up in this module would be only valid for the application scope, not
             // for shell scopes.
             var shellRegistrations = new ShellContainerRegistrations

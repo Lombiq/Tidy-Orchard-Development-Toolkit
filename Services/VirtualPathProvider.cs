@@ -17,7 +17,7 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
             get { return this; }
         }
 
-
+        
         public override System.Web.Caching.CacheDependency GetCacheDependency(string virtualPath, System.Collections.IEnumerable virtualPathDependencies, DateTime utcStart)
         {
             this.AlterPathIfOrchard(ref virtualPath);

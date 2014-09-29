@@ -118,13 +118,13 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
         public IEnumerable<string> ListFiles(string virtualPath)
         {
             _virtualPathDispatcher.AlterPathIfOrchard(ref virtualPath);
-            return _virtualPathProvider.ListFiles(virtualPath);
+            return _virtualPathProvider.ListFiles(virtualPath).Select(_virtualPathDispatcher.ConvertBackIfOrchard);
         }
 
         public IEnumerable<string> ListDirectories(string virtualPath)
         {
             _virtualPathDispatcher.AlterPathIfOrchard(ref virtualPath);
-            return _virtualPathProvider.ListDirectories(virtualPath);
+            return _virtualPathProvider.ListDirectories(virtualPath).Select(_virtualPathDispatcher.ConvertBackIfOrchard);
         }
     }
 }
