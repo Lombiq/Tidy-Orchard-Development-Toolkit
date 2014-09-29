@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Autofac;
 using Autofac.Core;
 using Lombiq.IsolatedDevelopmentToolkit.Services;
+using Orchard.Environment;
 using Orchard.FileSystems.VirtualPath;
 using Orchard.Localization;
 
@@ -16,6 +17,17 @@ namespace Lombiq.IsolatedDevelopmentToolkit
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<VirtualPathProvider>().As<ICustomVirtualPathProvider>().As<IVirtualPathDispatcher>().SingleInstance();
+
+            // Without shell registrations everything hooked up in this module would be only valid for the application scope, not
+            // for shell scopes.
+            var shellRegistrations = new ShellContainerRegistrations
+            {
+                Registrations = shellBuilder =>
+                {
+                    shellBuilder.RegisterModule(this);
+                }
+            };
+            builder.RegisterInstance(shellRegistrations).As<IShellContainerRegistrations>();
         }
 
         protected override void AttachToComponentRegistration(IComponentRegistry componentRegistry, IComponentRegistration registration)
@@ -41,6 +53,12 @@ namespace Lombiq.IsolatedDevelopmentToolkit
                     e.Instance = decorator;
                 };
             }
+        }
+
+
+        private class ShellContainerRegistrations : IShellContainerRegistrations
+        {
+            public Action<ContainerBuilder> Registrations { get; set; }
         }
     }
 }
