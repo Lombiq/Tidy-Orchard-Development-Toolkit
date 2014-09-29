@@ -26,7 +26,7 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
     ///     
     /// Also modify the accessPolicy of <handlers> to "Script, Read" (should include Read).
     /// </example>
-    public class IsolatedDevelopmentModule : IHttpModule, IShim
+    public class IsolatedDevelopmentHttpModule : IHttpModule, IShim
     {
         public IOrchardHostContainer HostContainer { get; set; }
 
