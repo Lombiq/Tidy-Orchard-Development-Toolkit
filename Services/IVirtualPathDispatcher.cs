@@ -33,7 +33,7 @@ namespace Lombiq.IsolatedOrchardDevelopmentToolkit.Services
     }
 
 
-    public static class VirtualPathDispatcher
+    public static class VirtualPathDispatcherExtensions
     {
         public static void AlterPathIfOrchard(this IVirtualPathDispatcher virtualPathDispatcher, ref string virtualPath)
         {

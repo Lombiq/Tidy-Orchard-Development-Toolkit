@@ -22,7 +22,7 @@ namespace Lombiq.IsolatedOrchardDevelopmentToolkit.AutofacModules
             // These two should be in different modules as decorators should be active for shells too, while VirtualPathProvider there
             // should be only one.
             builder.RegisterModule<DecoratorsModule>();
-            builder.RegisterModule<VirtualPathProviderModule>();
+            builder.RegisterModule<SingletonsModule>();
         }
     }
 }

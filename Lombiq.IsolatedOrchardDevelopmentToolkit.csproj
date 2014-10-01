@@ -45,10 +45,14 @@
   <ItemGroup>
     <Compile Include="AutofacModules\DecoratorsModule.cs" />
     <Compile Include="AutofacModules\IsolatedDevelopmentModule.cs" />
-    <Compile Include="AutofacModules\VirtualPathProviderModule.cs" />
+    <Compile Include="AutofacModules\SingletonsModule.cs" />
+    <Compile Include="FileSystemTree\Node.cs" />
+    <Compile Include="FileSystemTree\NodeType.cs" />
+    <Compile Include="FileSystemTree\Tree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IsolatedDevelopmentHttpModule.cs" />
     <Compile Include="Services\IVirtualPathDispatcher.cs" />
+    <Compile Include="Services\VirtualPathDispatcher.cs" />
     <Compile Include="Services\VirtualPathMonitorDecorator.cs" />
     <Compile Include="Services\VirtualPathProvider.cs" />
     <Compile Include="Services\VirtualPathProviderDecorator.cs" />

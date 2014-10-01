@@ -9,11 +9,12 @@ using Orchard.FileSystems.VirtualPath;
 
 namespace Lombiq.IsolatedOrchardDevelopmentToolkit.AutofacModules
 {
-    public class VirtualPathProviderModule : Module
+    public class SingletonsModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<VirtualPathProvider>().As<ICustomVirtualPathProvider>().As<IVirtualPathDispatcher>().SingleInstance();
+            builder.RegisterType<VirtualPathProvider>().As<ICustomVirtualPathProvider>().SingleInstance();
+            builder.RegisterType<VirtualPathDispatcher>().As<IVirtualPathDispatcher>().SingleInstance();
         }
     }
 }
