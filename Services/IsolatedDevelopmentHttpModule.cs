@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Orchard.Environment;
 
-namespace Lombiq.IsolatedDevelopmentToolkit.Services
+namespace Lombiq.IsolatedOrchardDevelopmentToolkit.Services
 {
     /// <summary>
     /// This HTTP module rewrites requests to Orchard's built-in static files (that are now under the Orchard folder)
@@ -20,7 +20,7 @@ namespace Lombiq.IsolatedDevelopmentToolkit.Services
     ///   <system.webServer>
     ///     <modules>
     ///         <remove name="IsolatedDevelopmentModule" />
-    ///         <add name="IsolatedDevelopmentModule" type="Lombiq.IsolatedDevelopmentToolkit.Services.IsolatedDevelopmentModule, Lombiq.IsolatedDevelopmentToolkit" />
+    ///         <add name="IsolatedDevelopmentModule" type="Lombiq.IsolatedOrchardDevelopmentToolkit.Services.IsolatedDevelopmentModule, Lombiq.IsolatedOrchardDevelopmentToolkit" />
     ///     </modules>
     ///     </system.webServer>
     ///     

@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Core;
-using Lombiq.IsolatedDevelopmentToolkit.Services;
+using Lombiq.IsolatedOrchardDevelopmentToolkit.Services;
 using Orchard.Environment;
 using Orchard.FileSystems.VirtualPath;
 using Orchard.Localization;
 
-namespace Lombiq.IsolatedDevelopmentToolkit.AutofacModules
+namespace Lombiq.IsolatedOrchardDevelopmentToolkit.AutofacModules
 {
     /// <summary>
     /// Main module for the Isolated Development Toolkit.

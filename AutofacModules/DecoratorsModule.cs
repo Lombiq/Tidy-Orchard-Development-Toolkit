@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Core;
-using Lombiq.IsolatedDevelopmentToolkit.Services;
+using Lombiq.IsolatedOrchardDevelopmentToolkit.Services;
 using Orchard.Environment;
 using Orchard.FileSystems.VirtualPath;
 
-namespace Lombiq.IsolatedDevelopmentToolkit.AutofacModules
+namespace Lombiq.IsolatedOrchardDevelopmentToolkit.AutofacModules
 {
     public class DecoratorsModule : Module
     {

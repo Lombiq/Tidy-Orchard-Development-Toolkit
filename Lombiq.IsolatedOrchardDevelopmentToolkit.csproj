@@ -7,8 +7,8 @@
     <ProjectGuid>{E104720B-9F33-4B13-8329-76496E2D6681}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lombiq.IsolatedDevelopmentToolkit</RootNamespace>
-    <AssemblyName>Lombiq.IsolatedDevelopmentToolkit</AssemblyName>
+    <RootNamespace>Lombiq.IsolatedOrchardDevelopmentToolkit</RootNamespace>
+    <AssemblyName>Lombiq.IsolatedOrchardDevelopmentToolkit</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

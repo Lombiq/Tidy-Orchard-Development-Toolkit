@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lombiq.IsolatedDevelopmentToolkit.Services
+namespace Lombiq.IsolatedOrchardDevelopmentToolkit.Services
 {
     public interface IVirtualPathDispatcher
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Orchard.FileSystems.VirtualPath;
 
-namespace Lombiq.IsolatedDevelopmentToolkit.Services
+namespace Lombiq.IsolatedOrchardDevelopmentToolkit.Services
 {
     // No need to override DynamicModuleVirtualPathProvider as the VPP implementations are executed in a cascading
     // manner. Might need to add 
