@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Autofac;
-using Lombiq.IsolatedOrchardDevelopmentToolkit.Services;
+using Lombiq.TidyOrchardDevelopmentToolkit.Services;
 using Orchard.FileSystems.VirtualPath;
 
-namespace Lombiq.IsolatedOrchardDevelopmentToolkit.AutofacModules
+namespace Lombiq.TidyOrchardDevelopmentToolkit.AutofacModules
 {
     public class SingletonsModule : Module
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Orchard.Caching;
 using Orchard.FileSystems.VirtualPath;
 
-namespace Lombiq.IsolatedOrchardDevelopmentToolkit.Services
+namespace Lombiq.TidyOrchardDevelopmentToolkit.Services
 {
     public class VirtualPathMonitorDecorator : IVirtualPathMonitor
     {

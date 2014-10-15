@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lombiq.IsolatedOrchardDevelopmentToolkit.FileSystemTree
+namespace Lombiq.TidyOrchardDevelopmentToolkit.FileSystemTree
 {
     internal enum NodeType
     {

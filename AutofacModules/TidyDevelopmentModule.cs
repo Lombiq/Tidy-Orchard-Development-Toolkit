@@ -5,17 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Core;
-using Lombiq.IsolatedOrchardDevelopmentToolkit.Services;
+using Lombiq.TidyOrchardDevelopmentToolkit.Services;
 using Orchard.Environment;
 using Orchard.FileSystems.VirtualPath;
 using Orchard.Localization;
 
-namespace Lombiq.IsolatedOrchardDevelopmentToolkit.AutofacModules
+namespace Lombiq.TidyOrchardDevelopmentToolkit.AutofacModules
 {
     /// <summary>
-    /// Main module for the Isolated Development Toolkit.
+    /// Main module for the Tidy Development Toolkit.
     /// </summary>
-    public class IsolatedDevelopmentModule : Module
+    public class TidyDevelopmentModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

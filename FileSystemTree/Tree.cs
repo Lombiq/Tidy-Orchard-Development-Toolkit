@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lombiq.IsolatedOrchardDevelopmentToolkit.FileSystemTree
+namespace Lombiq.TidyOrchardDevelopmentToolkit.FileSystemTree
 {
     /// <summary>
     /// An in-memory representation of a file system (sub)tree, i.e. the tree of directories and files.
@@ -12,7 +12,7 @@ namespace Lombiq.IsolatedOrchardDevelopmentToolkit.FileSystemTree
     /// <remarks>
     /// Using this for file and directory existence checks is much faster than using the actual file system. It's a static snapshot but this
     /// doesn't matter since it's only used to check whether a file or folder exists under the Orchard directory; and the Orchard directory
-    /// in an Isolated Development setup should never change during the execution of the application.
+    /// in an Tidy Development setup should never change during the execution of the application.
     /// </remarks>
     internal class Tree
     {

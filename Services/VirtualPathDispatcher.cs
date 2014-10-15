@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Hosting;
-using Lombiq.IsolatedOrchardDevelopmentToolkit.FileSystemTree;
+using Lombiq.TidyOrchardDevelopmentToolkit.FileSystemTree;
 using Orchard.Validation;
 
-namespace Lombiq.IsolatedOrchardDevelopmentToolkit.Services
+namespace Lombiq.TidyOrchardDevelopmentToolkit.Services
 {
     public class VirtualPathDispatcher : IVirtualPathDispatcher
     {

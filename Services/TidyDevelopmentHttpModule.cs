@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Orchard.Environment;
 
-namespace Lombiq.IsolatedOrchardDevelopmentToolkit.Services
+namespace Lombiq.TidyOrchardDevelopmentToolkit.Services
 {
     /// <summary>
     /// This HTTP module rewrites requests to Orchard's built-in static files (that are now under the Orchard folder)
@@ -19,14 +19,14 @@ namespace Lombiq.IsolatedOrchardDevelopmentToolkit.Services
     /// Registration added to the Web.config:
     ///   <system.webServer>
     ///     <modules>
-    ///         <remove name="IsolatedDevelopmentModule" />
-    ///         <add name="IsolatedDevelopmentModule" type="Lombiq.IsolatedOrchardDevelopmentToolkit.Services.IsolatedDevelopmentModule, Lombiq.IsolatedOrchardDevelopmentToolkit" />
+    ///         <remove name="TidyDevelopmentModule" />
+    ///         <add name="TidyDevelopmentModule" type="Lombiq.TidyOrchardDevelopmentToolkit.Services.TidyDevelopmentModule, Lombiq.TidyOrchardDevelopmentToolkit" />
     ///     </modules>
     ///     </system.webServer>
     ///     
     /// Also modify the accessPolicy of <handlers> to "Script, Read" (should include Read).
     /// </example>
-    public class IsolatedDevelopmentHttpModule : IHttpModule, IShim
+    public class TidyDevelopmentHttpModule : IHttpModule, IShim
     {
         public IOrchardHostContainer HostContainer { get; set; }
 
