@@ -10,12 +10,12 @@ This makes Orchard development not only tidier but it also allows you to:
 - Updating or upgrading the Orchard source is a matter of pulling in the latest changes from the Orchard repository.
 - You can even keep a single (or just a few) folders on your computer with the Orchard source that you link to from each of your solutions, thus minimizing storage space usage and build time.
 
-**Keep in mind that this toolkit is purely experimental!**
+**Keep in mind that this toolkit is purely experimental!** It can in no way support a production scenario. Also the aim was to get Orchard working in its basics: it fully runs. Other areas like deplyoment wasn't explored yet.
 
 
 ## Creating a Tidy Orchard solution
 
-There is a sample solution with all of the below tasks already done: see the [Tidy Orchard Development Quick Start](https://bitbucket.org/Lombiq/tidy-orchard-development-quick-start).
+There is a sample solution with all of the below tasks already done: see the [Tidy Orchard Development Quick Start](https://bitbucket.org/Lombiq/tidy-orchard-development-quick-start). This solution has all the details just referenced here.
 
 1. Create a folder in the root for your web project (e.g. “Orchard.Web” but the name is not mandatory) and copy the contents of Orchard.Web there (the Web csproj can also have an arbitrary name). Modify the Web.config as in the sample.
 2. Add the Toolkit to the Lombiq.TidyOrchardDevelopmentToolkit under your web project's folder.
@@ -40,7 +40,7 @@ There is a sample solution with all of the below tasks already done: see the [Ti
 	- Replace ProjectReference Include="Core\ with ProjectReference Include="Orchard\src\Orchard.Web\Core\.
 8. Add the Toolkit's project to the solution and reference it from the web project.
 9. Register the Toolkit's Autofac module in the HostComponents.config file.
-10. Register the TidyDevelopmentHttpModule in the Web.config.
+10. Register the TidyDevelopmentHttpModule in the Web.config and change the handlers declaration to use the appropriate accessPolicy.
 11. Add your own themes and modules under the Web project's folder under "Modules" and "Themes" folders, respectively.
 12. Modify module project files according to the [Orchard App Host](http://orchardapphost.codeplex.com/) documentation so they support the new solution structure.
 
