@@ -57,7 +57,10 @@
     <Compile Include="Services\VirtualPathProvider.cs" />
     <Compile Include="Services\VirtualPathProviderDecorator.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Licence.md" />
+    <None Include="Readme.md" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Orchard\src\Orchard\Orchard.Framework.csproj">
       <Project>{2d1d92bb-4555-4cbe-8d0e-63563d6ce4c6}</Project>
