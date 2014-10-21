@@ -32,6 +32,7 @@ There is a sample solution with all of the below tasks already done: see the [Ti
 	- Replace "Tools\ with "Orchard.Web\Orchard\src\Tools\ (including the quotes).
 	- Replace Orchard.Specs\ with Orchard.Web\Orchard\src\Orchard.Specs\.
 	- Replace Orchard.Profile\ with Orchard.Web\Orchard\src\Orchard.Profile\.
+	- Replace Orchard.Web\Orchard\src\Orchard.Web\Orchard.Web.csproj back to Orchard.Web\Orchard.Web.csproj.
 6. Copy over the contents of the original Orchard.Web folder to your own web folder except the Core, Modules, Media and Themes folders.
 7. Adjust Orchard.Web.csproj:
 	- Replace ..\..\lib\ with Orchard\lib\.
