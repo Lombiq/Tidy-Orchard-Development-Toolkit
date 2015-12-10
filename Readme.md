@@ -42,7 +42,7 @@ There is a sample solution with all of the below tasks already done: see the [Ti
 9. Register the Toolkit's Autofac module in the HostComponents.config file.
 10. Register the TidyDevelopmentHttpModule in the Web.config and change the handlers declaration to use the appropriate accessPolicy.
 11. Add your own themes and modules under the Web project's folder under "Modules" and "Themes" folders, respectively.
-12. Modify module project files according to the [Orchard App Host](http://orchardapphost.codeplex.com/) documentation so they support the new solution structure.
+12. Modify module project files according to the [Orchard App Host](https://github.com/Lombiq/Orchard-Application-Host) documentation so they support the new solution structure.
 
 Instead of copying you can always create symlinks with mklink instead.
 
